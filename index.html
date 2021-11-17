@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+
+    <style>
+        @font-face {
+            font-family: "iconfont";
+            /* Project id  */
+            src: url('iconfont.ttf?t=1632236173255') format('truetype');
+        }
+        
+        #iconfont {
+            vertical-align: bottom;
+            font-family: "iconfont" !important;
+            font-size: 14px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            outline: none;
+        }
+        
+        .container {
+            width: 1226px;
+            margin: auto;
+        }
+        /* 顶部导航栏1 */
+        
+        nav {
+            width: 1536px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #333;
+        }
+        
+        .header1 {
+            height: 40px;
+        }
+        
+        .header1 ul li {
+            float: left;
+        }
+        
+        .header1 ul li a,
+        .header1 ul li span {
+            font-size: 12px;
+            color: #b0b0b0;
+        }
+        
+        .header1 ul li span {
+            color: #424242;
+            padding: 0 5px;
+        }
+        
+        .app-appcode {
+            position: relative;
+        }
+        
+        .sanjiao {
+            position: absolute;
+            top: -10px;
+            left: 46px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0px 10px 10px 10px;
+            border-color: transparent transparent #ffffff transparent;
+        }
+        
+        .appcode {
+            position: absolute;
+            top: 40px;
+            left: -30px;
+            padding: 10px;
+            color: #424242;
+            text-align: center;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 5px rgb(124, 124, 124);
+            z-index: 1;
+        }
+        
+        .p {
+            margin-top: -10px;
+            line-height: 17px;
+            font-size: 14px;
+            color: #333;
+        }
+        
+        .var-right {
+            float: right;
+        }
+        
+        .var-right .shpping {
+            display: inline-block;
+            width: 100px;
+            height: 40px;
+            color: #b0b0b0;
+            margin-left: 20px;
+            background-color: #424242;
+            text-align: center;
+        }
+        
+        .shpping span {
+            font-size: 12px;
+        }
+        
+        .header1 ul li a:hover {
+            color: cornsilk;
+        }
+        /* 模块一 */
+        /* 顶部导航栏2 */
+        
+        .header2 {
+            position: relative;
+            height: 100px;
+        }
+        
+        .header2-log a {
+            position: absolute;
+            left: 0;
+            top: 25px;
+        }
+        
+        .header2-nav {
+            position: absolute;
+            top: 38px;
+            left: 250px;
+        }
+        
+        .header2-nav ul li {
+            float: left;
+            padding: 0 8px;
+            font-size: 16px;
+        }
+        
+        .header2-nav ul li a {
+            color: #333;
+        }
+        
+        .header2-nav ul li :hover {
+            color: #ff6700;
+        }
+        
+        .header2-search {
+            position: absolute;
+            top: 23px;
+            right: 0px;
+        }
+        
+        .header2-search input {
+            margin-right: -6px;
+            padding-left: 10px;
+            width: 200px;
+            height: 45px;
+            vertical-align: top;
+            border: 1px solid #b0b0b0;
+            color: #666;
+        }
+        
+        .header2-search a {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            border: 1px solid #b0b0b0;
+            text-align: center;
+        }
+        
+        .header2-search a:hover {
+            background-color: #ff6700;
+        }
+        
+        .header3 {
+            height: 220px;
+            border-top: 1px solid rgb(212, 212, 212);
+            text-align: center;
+        }
+        
+        .header3 ul li {
+            float: left;
+            width: 204px;
+            padding: 32px 0;
+        }
+        
+        .header3 ul li img {
+            margin: auto;
+            height: 110px;
+            padding: 0 22px;
+            border-left: 1px solid rgb(212, 212, 212);
+        }
+        /* 轮播图 */
+        
+        .hero {
+            position: relative;
+            height: 460px;
+        }
+        
+        .hero aside ul {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 420px;
+            padding: 20px 0;
+            background-color: rgba(110, 111, 111, .5);
+        }
+        
+        .hero aside ul li a {
+            display: block;
+            height: 42px;
+            line-height: 42px;
+            padding-left: 30px;
+            font-size: 14px;
+            color: seashell;
+        }
+        
+        .hero aside ul li a span {
+            float: right;
+            margin-right: 20px;
+        }
+        
+        .hero aside ul li a:hover {
+            background-color: #ff6700;
+        }
+        
+        .hero-img {
+            height: 100%;
+            width: 100%;
+            background-color: pink;
+        }
+        /* 雪碧 */
+        
+        .sub-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0 25px 0;
+            height: 170px;
+        }
+        
+        .list {
+            float: left;
+            width: 200px;
+            height: 170px;
+            background-color: rgb(50, 202, 202);
+        }
+        
+        .sub-row-img img {
+            float: right;
+            width: 316px;
+            height: 170px;
+        }
+        /* 模块二 */
+        /* 手机模块 */
+        
+        .home-box2 {
+            height: 5000px;
+            background-color: rgb(248, 245, 245);
+            padding-top: 25px;
+        }
+        
+        .test img {
+            vertical-align: bottom;
+            height: 120px;
+            background-color: crimson;
+        }
+        
+        .sort-title {
+            padding-top: 20px;
+            height: 58px;
+            line-height: 58px;
+            background-color: darkkhaki;
+        }
+        
+        .sort .text {
+            float: left;
+            font-size: 22px;
+        }
+        
+        .sort-title-right a {
+            font-size: 14px;
+        }
+        
+        .hone-lef img {
+            float: left;
+            width: 234px;
+            height: 614px;
+            background-color: darkmagenta;
+        }
+        
+        .hone-right {
+            width: 992px;
+            height: 614px;
+            float: right;
+            background-color: darkolivegreen;
+        }
+        
+        .hone-right ul li {
+            float: left;
+            margin: 0 0 14px 14px;
+            width: 234px;
+            height: 300px;
+            background-color: darkorange;
+        }
+        
+        .right {
+            float: right;
+        }
+        
+        .right a {
+            font-size: 14px;
+            color: rgb(15, 15, 15);
+        }
+        /* 家电部分 */
+        
+        .goods {
+            clear: both;
+        }
+        
+        .lists {
+            overflow: hidden;
+            width: 100%;
+            height: 614px;
+            background-color: chartreuse;
+        }
+        
+        .sort-title li {
+            float: left;
+            margin-left: 30px;
+        }
+        
+        .lists ul li {
+            width: 234px;
+            height: 300px;
+        }
+        
+        .sort-left {
+            float: left;
+            width: 234px;
+        }
+        
+        .sort-left ul li {
+            margin: 0 0 14px 0;
+            background-color: blueviolet;
+        }
+        
+        .sort-right ul li {
+            float: left;
+            margin: 0 0 14px 14px;
+            background-color: rgb(198, 100, 237);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 首页 -->
+    <div class="app">
+        <!-- 顶部导航栏1 -->
+        <nav>
+            <div class="header1 container">
+                <div class="var-left">
+                    <ul>
+                        <li><a href="javascript:;">小米商城</a><span>|</span></li>
+                        <li><a href="javascript:;">MIUI</a><span>|</span></li>
+                        <li><a href="javascript:;">loT</a><span>|</span></li>
+                        <li><a href="javascript:;">云服务</a><span>|</span></li>
+                        <li><a href="javascript:;">天星数科</a><span>|</span></li>
+                        <li><a href="javascript:;">有品</a><span>|</span></li>
+                        <li><a href="javascript:;">小爱开放平台</a><span>|</span></li>
+                        <li><a href="javascript:;">企业团购</a><span>|</span></li>
+                        <li><a href="javascript:;">资质证照</a><span>|</span></li>
+                        <li><a href="javascript:;">协议规则</a><span>|</span></li>
+                        <li class="app-appcode"><a href="javascript:;">下载app</a><span>|</span>
+                            <a href="" class="appcode">
+                                <div class="sanjiao"></div>
+                                <img src="../img/download.png" alt="" width="90px" height="90px">
+                                <p class="p">
+                                    小米商城APP</p>
+                            </a>
+                        </li>
+                        <li><a href="javascript:;">智能生活</a><span>|</span></li>
+                        <li><a href="javascript:;">Select Location</a></li>
+                    </ul>
+                </div>
+                <div class="var-right">
+                    <ul>
+                        <li><a href="javascript:;">登录</a><span>|</span></li>
+                        <li><a href="javascript:;">注册</a><span>|</span></li>
+                        <li><a href="javascript:;">消息通知</a></li>
+                        <!-- <li class="shpping"> -->
+                        <a href="javascript:;" id="iconfont" class="shpping">&#xe641; <span>购物车(0)</span>
+                        </a>
+                        <!-- </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- 模块一 -->
+        <div class="home-box1 ">
+            <div class="container">
+                <!-- 导航栏2 -->
+                <div class="header">
+                    <div class="header2">
+                        <div class="header2-log">
+                            <a href="#"><img src="../img/logo-mi2.png" alt="" width="56px" height="56px"></a>
+                        </div>
+                        <div class="header2-nav">
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">小米手机</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Redmi手机</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">电视</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">笔记本</a>
+                                </li>
+
+                                <li>
+                                    <a href="javascript:;">平板</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">家电</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">路由器</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">智能硬件</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">服务器</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">社区</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header2-search">
+                            <form action="">
+                                <input type="text" value="空调" style="border-color: #b0b0b0;">
+                                <a href="javascript::" id="iconfont">&#xe603;</a>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="header3">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="../img/header3-1.webp" alt="" width="160px" height="110px">
+                                    <p class="text">Xiaomi MIX4</p>
+                                    <p class="price">1999</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../img/header3-1.webp" alt="" width="160px" height="110px">
+                                    <p class="text">Xiaomi MIX4</p>
+                                    <p class="price">1999</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../img/header3-1.webp" alt="" width="160px" height="110px">
+                                    <p class="text">Xiaomi MIX4</p>
+                                    <p class="price">1999</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../img/header3-1.webp" alt="" width="160px" height="110px">
+                                    <p class="text">Xiaomi MIX4</p>
+                                    <p class="price">1999</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../img/header3-1.webp" alt="" width="160px" height="110px">
+                                    <p class="text">Xiaomi MIX4</p>
+                                    <p class="price">1999</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../img/header3-1.webp" alt="" width="160px" height="110px">
+                                    <p class="text">Xiaomi MIX4</p>
+                                    <p class="price">1999</p>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <!-- 轮播图 -->
+                <div class="hero">
+                    <aside>
+                        <ul>
+                            <li>
+                                <a href="javascript:;">手机<span>></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">电脑<span>></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">笔记本 平板<span>></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">家电<span>></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">出行 穿戴<span>></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">智能 路由器<span>></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">电源 配件<span>></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">健康 儿童<span>></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">耳机 音箱<span>></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">生活 箱包<span>></span></a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <div class="hero-img">
+                        <ul>
+                            <li>
+                                <a href="#"><img src="../img/rotate1.jpg" alt="" width="1226px" height="460px"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 雪碧 -->
+                <div class="sub-row">
+                    <div class="list"></div>
+                    <div class="sub-row-img"><img src="../img/sub-row-img1.jpg" alt=""></div>
+                    <div class="sub-row-img"><img src="../img/sub-row-img2.jpg" alt=""></div>
+                    <div class="sub-row-img"><img src="../img/sub-row-img3.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <!-- 模块二 -->
+        <div class="home-box2">
+            <div class="container">
+                <div class="test"><img src="../img/test1.webp" alt=""></div>
+                <div class="sort">
+                    <!-- 手机模块 -->
+                    <div class="hone">
+                        <div class="sort-title">
+                            <p class="text">手机</p>
+                            <a href="" class="sort-title-right right">查看更多</a>
+                        </div>
+                        <div class="hone-list">
+                            <div class="hone-lef">
+                                <a href=""><img src="../img/hone-big.webp" alt=""></a>
+                            </div>
+                            <div class="hone-right">
+                                <ul>
+                                    <li><img src="" alt=""></li>
+                                    <li><img src="" alt=""></li>
+                                    <li><img src="" alt=""></li>
+                                    <li><img src="" alt=""></li>
+                                    <li><img src="" alt=""></li>
+                                    <li><img src="" alt=""></li>
+                                    <li><img src="" alt=""></li>
+                                    <li><img src="" alt=""></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 家电模块 -->
+                    <div class="goods">
+                        <div class="sort-title">
+                            <p class="text">家电</p>
+                            <ul class="right">
+                                <li>
+                                    <a href="">热门</a>
+                                </li>
+                                <li>
+                                    <a href="">电视影音</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lists">
+                            <div class="sort-left">
+                                <ul>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sort-right">
+                                <ul>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 智能模块 -->
+                    <div class="goods">
+                        <div class="sort-title">
+                            <p class="text">智能</p>
+                            <ul class="right">
+                                <li>
+                                    <a href="">热门</a>
+                                </li>
+                                <li>
+                                    <a href="">安防</a>
+                                </li>
+                                <li>
+                                    <a href="">出行</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lists">
+                            <div class="sort-left">
+                                <ul>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sort-right">
+                                <ul>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- ----- -->
+                    <div class="test"><img src="" alt=""></div>
+                    <!-- 搭配模块 -->
+                    <div class="goods">
+                        <div class="sort-title">
+                            <p class="text">智能</p>
+                            <ul class="right">
+                                <li>
+                                    <a href="">热门</a>
+                                </li>
+                                <li>
+                                    <a href="">安防</a>
+                                </li>
+                                <li>
+                                    <a href="">出行</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lists">
+                            <div class="sort-left">
+                                <ul>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sort-right">
+                                <ul>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 搭配模块 -->
+                    <div class="goods">
+                        <div class="sort-title">
+                            <p class="text">智能</p>
+                            <ul class="right">
+                                <li>
+                                    <a href="">热门</a>
+                                </li>
+                                <li>
+                                    <a href="">安防</a>
+                                </li>
+                                <li>
+                                    <a href="">出行</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lists">
+                            <div class="sort-left">
+                                <ul>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sort-right">
+                                <ul>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 周边模块 -->
+                    <div class="goods">
+                        <div class="sort-title">
+                            <p class="text">智能</p>
+                            <ul class="right">
+                                <li>
+                                    <a href="">热门</a>
+                                </li>
+                                <li>
+                                    <a href="">安防</a>
+                                </li>
+                                <li>
+                                    <a href="">出行</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lists">
+                            <div class="sort-left">
+                                <ul>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sort-right">
+                                <ul>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- ----- -->
+                    <div class="test"><img src="" alt=""></div>
+                    <!-- 视频模块 -->
+                    <div class="move">
+                        <div class="sort-title">
+                            <p class="text">视频</p>
+                            <a href="" class="sort-title-right right">查看全部</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <script>
+        </script>
+</body>
+
+</html>
